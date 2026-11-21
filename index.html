@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10152b">
+  <title>W2 — Diversão e desafios</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="W2 início"><span class="brand-mark">W</span><span>W2</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav id="mainNav">
+      <a href="#inicio">Início</a>
+      <a href="#jogos">Jogos</a>
+      <a href="#ranking">Ranking</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+    <div class="top-actions"><span class="points-pill">★ <b id="headerPoints">0</b> pontos</span></div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <span class="eyebrow">SEU ESPAÇO DE DESAFIOS</span>
+        <h1>Entre no jogo.<br><em>Supere seus limites.</em></h1>
+        <p>Explore desafios rápidos, acumule pontos virtuais e divirta-se. Aqui, pontos não têm valor em dinheiro e não podem ser comprados ou sacados.</p>
+        <a class="primary-btn" href="#jogos">Explorar jogos <span>→</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="hero-token">W<span>2</span></div>
+        <div class="float-card card-a">✦ <b>DESAFIO</b></div>
+        <div class="float-card card-b">+10 <small>pontos</small></div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Seu progresso">
+      <article><span class="stat-icon">★</span><div><strong id="totalPoints">0</strong><small>Pontos virtuais</small></div></article>
+      <article><span class="stat-icon">🎮</span><div><strong id="playedCount">0</strong><small>Desafios concluídos</small></div></article>
+      <article><span class="stat-icon">🏆</span><div><strong id="levelName">Iniciante</strong><small>Seu nível</small></div></article>
+    </section>
+
+    <section class="section" id="jogos">
+      <div class="section-heading"><div><span class="eyebrow">ESCOLHA SEU DESAFIO</span><h2>Jogos em destaque</h2></div><span class="section-note">Gratuitos • Sem apostas</span></div>
+      <div class="game-grid">
+        <article class="game-card">
+          <div class="game-visual memory">🧠<span class="game-tag">MEMÓRIA</span></div>
+          <div class="game-info"><h3>Memória relâmpago</h3><p>Observe a sequência e repita na ordem certa.</p><button class="game-btn" data-game="memory">Jogar agora <span>→</span></button></div>
+        </article>
+        <article class="game-card">
+          <div class="game-visual quiz">💡<span class="game-tag">CONHECIMENTO</span></div>
+          <div class="game-info"><h3>Quiz rápido</h3><p>Responda perguntas e teste seus conhecimentos.</p><button class="game-btn" data-game="quiz">Jogar agora <span>→</span></button></div>
+        </article>
+        <article class="game-card">
+          <div class="game-visual reaction">⚡<span class="game-tag">REFLEXO</span></div>
+          <div class="game-info"><h3>Teste de reflexo</h3><p>Espere o sinal mudar e toque o mais rápido possível.</p><button class="game-btn" data-game="reaction">Jogar agora <span>→</span></button></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section ranking-section" id="ranking">
+      <div class="section-heading"><div><span class="eyebrow">PROGRESSO LOCAL</span><h2>Seu ranking</h2></div></div>
+      <div class="ranking-panel"><div class="rank-medal">🏅</div><div><b id="rankTitle">Você está começando!</b><p>Continue jogando para melhorar sua pontuação neste dispositivo.</p></div><strong id="rankPoints">0 pts</strong></div>
+      <p class="fine-print">O ranking desta versão é apenas demonstrativo e fica salvo neste navegador. Não existe premiação financeira.</p>
+    </section>
+
+    <section class="about section" id="sobre">
+      <span class="eyebrow">SOBRE O W2</span><h2>Aprender, jogar e evoluir.</h2>
+      <p>O W2 é um protótipo de entretenimento com desafios gratuitos e pontos fictícios. Não solicita depósitos, dados bancários ou pagamentos.</p>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#"><span class="brand-mark">W</span><span>W2</span></a><span>© <span id="year"></span> W2 • Diversão responsável</span></footer>
+
+  <dialog id="gameDialog" class="game-dialog">
+    <button class="close-dialog" id="closeDialog" aria-label="Fechar">×</button>
+    <div id="gameContent"></div>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>
